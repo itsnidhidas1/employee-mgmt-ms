@@ -1,0 +1,19 @@
+######GET ALL###########
+curl --location 'http://localhost:8080/employee-mgmt-ms/employees'
+
+######Create##########
+curl --location 'http://localhost:8080/employee-mgmt-ms/employee' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Rishi",
+    "address": "Brampton",
+    "dateOfBirth": "1987-12-03",
+    "phoneNumber": "2581125422",
+    "title": "Developer",
+    "sin": "123456789"
+}'
+
+######Filter based on age and title#######
+
+
+curl --location 'http://localhost:8080/employee-mgmt-ms/employees?age=20&title=Developer'
